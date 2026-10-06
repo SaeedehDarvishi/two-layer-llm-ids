@@ -1,0 +1,611 @@
+================================================================================
+Sample ID: 14695
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation is mostly grounded, but it incorrectly states that the three largest timing-related contributions all decreased the decision. Fwd IAT Min is an inter-arrival-time feature with a larger contribution than Fwd IAT Mean and it increased the decision.
+================================================================================
+Sample ID: 14695
+Criterion: feature_consistency
+Score: 0
+Reason: The output misorders and mischaracterizes the supplied timing/IAT feature contributions by calling Fwd IAT Mean one of the three largest timing-related contributions while omitting Fwd IAT Min, which has a larger contribution and opposite direction.
+================================================================================
+Sample ID: 44210
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation is mostly supported, but it interprets Bwd IAT Total as a timing/inter-arrival-time feature even though the supplied IDS evidence provides no definition or category for that feature. Because all interpretations must be semantically supported by the provided evidence, this creates an unsupported interpretation.
+================================================================================
+Sample ID: 44210
+Criterion: feature_consistency
+Score: 0
+Reason: The output assigns timing semantics to Bwd IAT Total, but the original IDS evidence left that feature's definition and category blank. This is an unsupported feature-definition interpretation.
+================================================================================
+Sample ID: 44210
+Criterion: factual_consistency
+Score: 0
+Reason: Most factual claims are grounded in the supplied IDS output, but the characterization of Bwd IAT Total as a timing-derived feature is not grounded because no definition or category was supplied for it. No other major fabricated attacker behavior, compromise claim, or impact claim is present.
+================================================================================
+Sample ID: 15932
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation is mostly aligned with the supplied IDS evidence, but it assigns an unsupported unit to Flow IAT Mean. Since the provided feature definition does not specify seconds, this is an unsupported interpretation of the feature value.
+================================================================================
+Sample ID: 15932
+Criterion: feature_consistency
+Score: 0
+Reason: The output introduces a unit of seconds for Flow IAT Mean even though the supplied definition provides no unit. This is a feature-unit inconsistency.
+================================================================================
+Sample ID: 15932
+Criterion: factual_consistency
+Score: 0
+Reason: The statement that the Flow IAT Mean value is measured in seconds is not grounded in the supplied IDS evidence. No unit was provided for that feature.
+================================================================================
+Sample ID: 7956
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation is mostly supported, but it introduces an unsupported interpretation of backward packet-length variability even though the supplied packet-length features include forward standard deviation, overall packet length standard deviation, and backward mean/max, not backward packet-length variability.
+================================================================================
+Sample ID: 7956
+Criterion: feature_consistency
+Score: 0
+Reason: The output is inconsistent with the supplied feature semantics by referring to backward packet-length variability, which is not one of the provided backward packet-length features. The provided backward packet-length features are mean and maximum, while variability is represented by Fwd Packet Length Std and Packet Length Std.
+================================================================================
+Sample ID: 7956
+Criterion: factual_consistency
+Score: 0
+Reason: The explanation contains an invented observation by describing backward packet-length variability that is not directly present in the supplied IDS evidence. Other uncertainty-qualified recommendations are grounded and appropriately conditional.
+================================================================================
+Sample ID: 17231
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation contains an invalid interpretation by grouping Init_Win_bytes_backward with packet-rate and inter-arrival-time features, even though it is defined as a TCP Window feature. Because all interpretations must be semantically valid, this causes correctness to fail.
+================================================================================
+Sample ID: 17231
+Criterion: feature_consistency
+Score: 0
+Reason: The output confuses the category/semantics of Init_Win_bytes_backward by listing it among packet-rate and inter-arrival-time features. The supplied definition identifies it as a TCP Window feature.
+================================================================================
+Sample ID: 17231
+Criterion: factual_consistency
+Score: 0
+Reason: The output introduces packet sequence validation, which is not grounded in the supplied IDS evidence or influential feature list. It also makes the unsupported factual grouping of Init_Win_bytes_backward as a packet-rate/inter-arrival-time feature.
+================================================================================
+Sample ID: 27878
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation mostly follows the IDS evidence, but it makes an unsupported interpretation that the influential features include a bidirectional-volume pattern. The provided volume-related feature is specifically backward-direction total packet length, while the forward feature is minimum segment size, not forward volume.
+================================================================================
+Sample ID: 27878
+Criterion: feature_consistency
+Score: 0
+Reason: The output is inconsistent with the supplied feature semantics by describing the evidence as bidirectional-volume/bidirectional-flow when the supplied volume feature is only backward-direction total packet length. No forward-direction volume feature is provided.
+================================================================================
+Sample ID: 27878
+Criterion: factual_consistency
+Score: 0
+Reason: The explanation includes an unsupported factual characterization of the evidence as bidirectional-volume/bidirectional-flow. The supplied IDS evidence does not include a forward volume measurement or a defined bidirectional-volume observation.
+================================================================================
+Sample ID: 24745
+Criterion: explanation_correctness
+Score: 0
+Reason: The output incorrectly interprets feature units by describing Flow Duration as seconds even though the supplied definition states it is measured in microseconds. It also assigns seconds to Fwd IAT Min despite no unit being provided.
+================================================================================
+Sample ID: 24745
+Criterion: feature_consistency
+Score: 0
+Reason: The explanation is not feature consistent because it uses incorrect or unsupported units for supplied timing features. Flow Duration is defined as microseconds, not seconds, and Fwd IAT Min has no supplied unit.
+================================================================================
+Sample ID: 24745
+Criterion: factual_consistency
+Score: 0
+Reason: The output includes factual claims about feature units that are not grounded in the supplied IDS evidence and, for Flow Duration, contradict the provided definition.
+================================================================================
+Sample ID: 76658
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation introduces an unsupported interpretation that the IDS decision was based on forward packet inter-arrival timing. The supplied features include Flow IAT Mean and Bwd IAT Mean, but no forward IAT feature is provided.
+================================================================================
+Sample ID: 76658
+Criterion: feature_consistency
+Score: 0
+Reason: The output incorrectly implies the presence of a forward inter-arrival-time measurement. This confuses the supplied Flow IAT Mean feature with a directional forward IAT feature that was not provided.
+================================================================================
+Sample ID: 76658
+Criterion: factual_consistency
+Score: 0
+Reason: The statement about forward packet inter-arrival timing is not grounded in the supplied IDS evidence. No forward IAT feature, value, or definition was included.
+================================================================================
+Sample ID: 78859
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation includes an unsupported numerical conclusion by identifying the three largest timing-related contributions incorrectly. Fwd IAT Min has a larger contribution than Fwd IAT Mean, so the stated reasoning is not fully logically supported by the supplied feature attributions.
+================================================================================
+Sample ID: 78859
+Criterion: feature_consistency
+Score: 0
+Reason: The output misstates the relative feature contributions: Fwd IAT Min has a contribution of 7.70, which is greater than Fwd IAT Mean at 5.95, so Fwd IAT Mean is not one of the three largest timing-related contributions.
+================================================================================
+Sample ID: 78859
+Criterion: factual_consistency
+Score: 0
+Reason: A factual claim about the ranking of timing-related feature contributions is not grounded in the supplied IDS evidence. The rest of the output largely stays within the provided evidence, but this incorrect ranking makes the factual consistency fail.
+================================================================================
+Sample ID: 22838
+Criterion: feature_consistency
+Score: 0
+Reason: The model reports the contribution values as percentages even though the input provides them only as numeric contribution values without a percent unit. This introduces an unsupported unit interpretation.
+================================================================================
+Sample ID: 22838
+Criterion: factual_consistency
+Score: 0
+Reason: Most factual claims are grounded, but the output introduces percent-based contribution units that are not explicitly supplied in the IDS evidence. This is an unsupported factual representation of the feature contribution values.
+================================================================================
+Sample ID: 77067
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation contains an incorrect interpretation by grouping Total Backward Packets as a packet timing/rate feature, even though the supplied definition classifies it as a packet count feature. Because at least one feature interpretation is semantically invalid, correctness fails.
+================================================================================
+Sample ID: 77067
+Criterion: feature_consistency
+Score: 0
+Reason: The output confuses the semantics/category of Total Backward Packets by treating it as a timing or rate feature rather than a packet count feature. This is inconsistent with the supplied feature definition and category.
+================================================================================
+Sample ID: 77067
+Criterion: factual_consistency
+Score: 0
+Reason: Most statements are grounded in the supplied IDS evidence, but the claim that Total Backward Packets is part of the packet timing/rate feature group is not grounded and contradicts the provided feature category.
+================================================================================
+Sample ID: 63299
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation contains an unsupported/incorrect generalization that the most influential features all increase the prediction, despite the supplied evidence including Fwd Header Length and Fwd IAT Total with negative SHAP values and direction "decrease."
+================================================================================
+Sample ID: 63299
+Criterion: feature_consistency
+Score: 0
+Reason: The output is mostly aligned with the supplied feature names and definitions, but it incorrectly states that all most influential features increase the prediction, conflicting with the provided decrease directions for Fwd Header Length and Fwd IAT Total.
+...
+Sample ID: 58078
+Criterion: factual_consistency
+Score: 0
+Reason: The statement about “highest-confidence contributors” introduces an unsupported factual characterization not present in the IDS evidence. No per-feature confidence values are supplied.
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+================================================================================
+Sample ID: 77067
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation contains an incorrect interpretation by grouping Total Backward Packets as a packet timing/rate feature, even though the supplied definition classifies it as a packet count feature. Because at least one feature interpretation is semantically invalid, correctness fails.
+================================================================================
+Sample ID: 77067
+Criterion: feature_consistency
+Score: 0
+Reason: The output confuses the semantics/category of Total Backward Packets by treating it as a timing or rate feature rather than a packet count feature. This is inconsistent with the supplied feature definition and category.
+================================================================================
+Sample ID: 77067
+Criterion: factual_consistency
+Score: 0
+Reason: Most statements are grounded in the supplied IDS evidence, but the claim that Total Backward Packets is part of the packet timing/rate feature group is not grounded and contradicts the provided feature category.
+================================================================================
+Sample ID: 63299
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation contains an unsupported/incorrect generalization that the most influential features all increase the prediction, despite the supplied evidence including Fwd Header Length and Fwd IAT Total with negative SHAP values and direction "decrease."
+================================================================================
+Sample ID: 63299
+Criterion: feature_consistency
+Score: 0
+Reason: The output is mostly aligned with the supplied feature names and definitions, but it incorrectly states that all most influential features increase the prediction, conflicting with the provided decrease directions for Fwd Header Length and Fwd IAT Total.
+================================================================================
+Sample ID: 63299
+Criterion: factual_consistency
+Score: 0
+Reason: The output introduces unsupported characterizations and concepts not grounded in the supplied IDS evidence, including describing timing values as "very small" without a provided baseline and referring to a "high-weight WebAttack signature."
+================================================================================
+Sample ID: 42145
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation mostly follows the supplied IDS evidence, but it introduces unsupported qualitative interpretation of Flow Duration as "extended" and presents contribution values as percentages even though no percentage unit was provided.
+================================================================================
+Sample ID: 42145
+Criterion: feature_consistency
+Score: 0
+Reason: The output assigns percentage units to contribution values that were supplied without a percent unit, and it characterizes Flow Duration as extended without a provided baseline or threshold.
+================================================================================
+Sample ID: 42145
+Criterion: factual_consistency
+Score: 0
+Reason: The output includes factual claims not grounded in the supplied evidence, including percentage units for contributions and an unsupported qualitative description of Flow Duration.
+================================================================================
+Sample ID: 28899
+Criterion: feature_consistency
+Score: 0
+Reason: The output adds percentage units to the contribution values even though the input provides only numeric contribution fields without defining them as percentages. It also describes RST Flag Count as absence of RST packets, while the supplied feature has no definition and is specifically a flag count.
+================================================================================
+Sample ID: 28899
+Criterion: factual_consistency
+Score: 0
+Reason: Most statements are grounded, but the output introduces unsupported percentage units for contribution values and asserts absence of RST packets rather than limiting itself to the supplied RST Flag Count value of 0.0.
+================================================================================
+Sample ID: 91244
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation is mostly aligned with the supplied SHAP directions, but it interprets Bwd IAT Min as being measured in seconds even though no unit is supplied in the IDS evidence. This makes part of the feature interpretation unsupported.
+================================================================================
+Sample ID: 91244
+Criterion: feature_consistency
+Score: 0
+Reason: The output adds a unit of seconds to Bwd IAT Min, but the supplied feature definition does not specify units. This is an unsupported unit interpretation.
+================================================================================
+Sample ID: 91244
+Criterion: factual_consistency
+Score: 0
+Reason: Most statements are grounded in the supplied IDS evidence or explicitly conditional, but the output fabricates the unit 'seconds' for Bwd IAT Min, which is not provided in the evidence.
+================================================================================
+Sample ID: 34797
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation mostly follows the supplied evidence, but it incorrectly characterizes Flow IAT Mean as forward inter-arrival timing. The supplied definition states Flow IAT Mean is the mean time between packets in the flow, not specifically in the forward direction.
+================================================================================
+Sample ID: 34797
+Criterion: feature_consistency
+Score: 0
+Reason: The output introduces an incorrect feature-direction interpretation by treating Flow IAT Mean as forward inter-arrival timing. This is inconsistent with the provided feature definition, which is flow-level rather than forward-direction-specific.
+================================================================================
+Sample ID: 34797
+Criterion: factual_consistency
+Score: 0
+Reason: The statement about forward inter-arrival timing is not grounded in the supplied IDS evidence. No supplied feature defines a forward-direction inter-arrival-time metric.
+================================================================================
+Sample ID: 53182
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation mostly follows the SHAP directions and contributions, but it interprets Bwd IAT Total as a backward inter-arrival timing feature even though the supplied definition and category for that feature are empty. This introduces an unsupported semantic interpretation of an influential feature.
+================================================================================
+Sample ID: 53182
+Criterion: feature_consistency
+Score: 0
+Reason: The output assigns a timing/inter-arrival meaning to Bwd IAT Total, but the input provides no definition or category for that feature. This is an unsupported feature-semantics expansion.
+================================================================================
+Sample ID: 53182
+Criterion: factual_consistency
+Score: 0
+Reason: The output includes an unsupported factual characterization of Bwd IAT Total as backward inter-arrival timing. Since the supplied evidence leaves that feature undefined, this statement is not grounded in the IDS evidence.
+================================================================================
+Sample ID: 18376
+Criterion: explanation_correctness
+Score: 0
+Reason: The output mostly follows the supplied evidence, but it incorrectly groups the mean IAT as a forward-direction IAT feature. The supplied evidence contains Flow IAT Mean, not Fwd IAT Mean.
+================================================================================
+Sample ID: 18376
+Criterion: feature_consistency
+Score: 0
+Reason: The explanation confuses feature semantics by referring to a forward IAT mean value, while the provided mean feature is Flow IAT Mean, defined as mean time between packets in the flow, not specifically the forward direction.
+================================================================================
+Sample ID: 18376
+Criterion: factual_consistency
+Score: 0
+Reason: The output introduces an unsupported feature concept, forward IAT mean, which is not present in the supplied IDS evidence. No other major unsupported attacker behavior, compromise claim, or operational impact is asserted.
+================================================================================
+Sample ID: 58078
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation is mostly supported, but it incorrectly refers to feature contributors as “highest-confidence contributors,” which is not supported by the supplied evidence; the features have SHAP values and contribution percentages, not individual confidence values.
+================================================================================
+Sample ID: 58078
+Criterion: feature_consistency
+Score: 0
+Reason: The output confuses feature contribution with confidence by describing influential features as “highest-confidence contributors.” The supplied feature fields include SHAP, contribution, direction, value, category, and definition, but no per-feature confidence.
+================================================================================
+Sample ID: 58078
+Criterion: factual_consistency
+Score: 0
+Reason: The statement about “highest-confidence contributors” introduces an unsupported factual characterization not present in the IDS evidence. No per-feature confidence values are supplied.
+================================================================================
+Sample ID: 19767
+Criterion: explanation_correctness
+Score: 0
+Reason: Most of the interpretation follows the supplied influential features, but the output introduces a forward inter-arrival-time element that is not present in the IDS evidence. Because recommendations must be explicitly supported by supplied features, this unsupported feature reference makes the explanation not fully correct.
+================================================================================
+Sample ID: 19767
+Criterion: feature_consistency
+Score: 0
+Reason: The supplied features include Flow IAT Mean and Bwd IAT Mean, but no forward inter-arrival-time feature is provided. Referring to forward inter-arrival-time telemetry confuses or invents a feature direction not present in the input.
+================================================================================
+Sample ID: 19767
+Criterion: factual_consistency
+Score: 0
+Reason: The output contains an unsupported factual reference to forward inter-arrival-time telemetry as an influential input, which is not grounded in the supplied IDS evidence. No such feature or value was provided.
+================================================================================
+Sample ID: 64713
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation mostly follows the supplied SHAP evidence, but it incorrectly interprets Bwd Packet Length Mean = 0.0 as an absence of measured backward packet length. The feature definition only states it is the mean size of packets in the backward direction, so absence of measurement is not logically supported.
+================================================================================
+Sample ID: 64713
+Criterion: feature_consistency
+Score: 0
+Reason: The output uses the provided feature names and contribution values accurately overall, but it misstates the semantics of Bwd Packet Length Mean by treating a value of 0.0 as absence of a measured backward packet length. The supplied definition supports only a mean backward packet size value, not absence of measurement.
+================================================================================
+Sample ID: 64713
+Criterion: factual_consistency
+Score: 0
+Reason: The output introduces an unsupported factual observation that there was an absence of measured backward packet length. This is not explicitly provided by the IDS evidence and is not equivalent to the supplied Bwd Packet Length Mean value of 0.0.
+================================================================================
+Sample ID: 75799
+Criterion: explanation_correctness
+Score: 0
+Reason: Most interpretations are supported by the supplied SHAP attributions, but the output characterizes IAT values as microsecond-scale even though no time unit is provided in the evidence. This is an unsupported interpretation of the feature values.
+================================================================================
+Sample ID: 75799
+Criterion: feature_consistency
+Score: 0
+Reason: The explanation uses the supplied feature names and values correctly overall, but it assigns a microsecond-scale interpretation to IAT values without any provided unit. This introduces an unsupported unit/scale characterization.
+================================================================================
+Sample ID: 75799
+Criterion: factual_consistency
+Score: 0
+Reason: The output is largely grounded in the IDS evidence, but it invents a unit-based characterization of the IAT values as microsecond-scale, which is not supplied in the prompt.
+================================================================================
+Sample ID: 19870
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation is mostly supported by the supplied SHAP contributions, but it makes an unsupported interpretation that the feature values are normalized. The prompt provides feature values and definitions but does not state that the values are normalized.
+================================================================================
+Sample ID: 19870
+Criterion: feature_consistency
+Score: 0
+Reason: The output introduces a numerical interpretation of the feature values as normalized, which is not provided in the IDS evidence. This is inconsistent with the requirement to use feature values and semantics exactly as supplied.
+================================================================================
+Sample ID: 19870
+Criterion: factual_consistency
+Score: 0
+Reason: The statement that the evidence contains normalized feature values is not grounded in the supplied IDS output. No other major fabricated attack behavior, compromise claim, or external indicator is introduced.
+================================================================================
+Sample ID: 55058
+Criterion: feature_consistency
+Score: 0
+Reason: The output converts the supplied contribution values into percentages, but the input provides numeric contribution fields without defining them as percent units.
+================================================================================
+Sample ID: 55058
+Criterion: factual_consistency
+Score: 0
+Reason: The output introduces percentage-form contribution values that are not explicitly supplied as percentages in the IDS evidence.
+================================================================================
+Sample ID: 82073
+Criterion: feature_consistency
+Score: 0
+Reason: Most feature names, values, directions, and contributions are used consistently, but the output incorrectly generalizes the timing fields as microsecond-level. Only Flow Duration is defined as being in microseconds; the IAT feature definitions do not provide units.
+================================================================================
+Sample ID: 82073
+Criterion: factual_consistency
+Score: 0
+Reason: The output introduces a flow timestamp even though no timestamp is supplied in the IDS evidence. It also references normalization in the detection pipeline without that being provided as an observed fact.
+================================================================================
+Sample ID: 9841
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation is mostly supported, but it incorrectly refers to a forward inter-arrival-time value even though the supplied feature is Flow IAT Mean, defined as mean time between packets in the flow, not forward direction.
+================================================================================
+Sample ID: 9841
+Criterion: feature_consistency
+Score: 0
+Reason: The output confuses Flow IAT Mean with a forward inter-arrival-time feature. The provided features include Flow IAT Mean and Bwd IAT Mean, but no Forward IAT Mean feature or forward inter-arrival-time value is supplied.
+================================================================================
+Sample ID: 9841
+Criterion: factual_consistency
+Score: 0
+Reason: The output introduces an unsupported forward inter-arrival-time value as if it were used by the IDS. This value is not present in the supplied IDS evidence.
+================================================================================
+Sample ID: 5345
+Criterion: explanation_correctness
+Score: 0
+Reason: Most conclusions are supported by the supplied SHAP directions and feature list, but the output introduces a bidirectional packet-length interpretation even though the only packet-length feature provided is backward-direction mean packet size.
+================================================================================
+Sample ID: 5345
+Criterion: feature_consistency
+Score: 0
+Reason: The explanation is mostly consistent with the supplied features, but it misstates Bwd Packet Length Mean as involving bidirectional packet characteristics. The provided definition only supports mean packet size in the backward direction.
+================================================================================
+Sample ID: 5345
+Criterion: factual_consistency
+Score: 0
+Reason: The output introduces bidirectional packet-length characteristics that are not present in the supplied IDS evidence. Only backward packet length mean is provided.
+================================================================================
+Sample ID: 37507
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation is mostly supported, but one recommendation incorrectly characterizes the backward packet-rate evidence as having no contribution/value beyond 0.0, despite the supplied IDS evidence showing Bwd Packets/s has value 0.0 but a positive SHAP contribution. This creates an unsupported and misleading interpretation of the feature's role.
+================================================================================
+Sample ID: 37507
+Criterion: feature_consistency
+Score: 0
+Reason: The output conflates the Bwd Packets/s feature value of 0.0 with contribution semantics. The provided IDS evidence states Bwd Packets/s has value 0.0 and positive contribution 8.89%, so describing it as having no backward packet-rate contribution is inconsistent.
+================================================================================
+Sample ID: 37507
+Criterion: factual_consistency
+Score: 0
+Reason: The statement about 'no backward packet-rate contribution value' is not grounded in the supplied evidence and contradicts the provided positive SHAP contribution for Bwd Packets/s. Other factual claims are generally tied to the IDS output.
+================================================================================
+Sample ID: 6007
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation mostly follows the supplied SHAP directions, but it introduces an unsupported unit-based characterization of the IAT values as sub-millisecond. The provided IAT feature definitions do not specify units, so this interpretation is not fully supported by the supplied evidence.
+================================================================================
+Sample ID: 6007
+Criterion: feature_consistency
+Score: 0
+Reason: The output uses the provided feature names and SHAP directions correctly, but it assigns a sub-millisecond unit interpretation to IAT values even though the supplied IAT definitions provide no units. This is an unsupported numerical/unit interpretation.
+================================================================================
+Sample ID: 6007
+Criterion: factual_consistency
+Score: 0
+Reason: The explanation introduces a factual claim about sub-millisecond IAT values that is not grounded in the supplied IDS evidence because no IAT unit is provided. Other caveated references to additional telemetry are appropriately conditional.
+================================================================================
+Sample ID: 13886
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation incorrectly groups Bwd Packet Length Max with TCP window and segmentation-related features, although the supplied definition categorizes it as a packet statistic. This makes one interpretation semantically invalid.
+================================================================================
+Sample ID: 13886
+Criterion: feature_consistency
+Score: 0
+Reason: The output misuses the supplied feature category/semantics by treating Bwd Packet Length Max as TCP window or segmentation-related rather than as a packet statistics feature.
+================================================================================
+Sample ID: 13886
+Criterion: factual_consistency
+Score: 0
+Reason: The explanation includes an unsupported factual relationship by assigning Bwd Packet Length Max to TCP window/segmentation evidence, which is not grounded in the supplied IDS feature definitions.
+================================================================================
+Sample ID: 971
+Criterion: feature_consistency
+Score: 0
+Reason: The output mostly uses the supplied features correctly, but it refers to bidirectional header data even though the evidence only provides Bwd Header Length, not bidirectional header information.
+================================================================================
+Sample ID: 971
+Criterion: factual_consistency
+Score: 0
+Reason: The explanation is generally grounded, but the statement about bidirectional header data introduces an unsupported observation not present in the supplied IDS evidence.
+================================================================================
+Sample ID: 3129
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation incorrectly interprets Flow IAT Mean as a forward-flow inter-arrival-time feature, although the supplied definition describes it as mean time between packets in the flow without a forward-direction qualifier. This makes part of the IDS interpretation semantically unsupported.
+================================================================================
+Sample ID: 3129
+Criterion: feature_consistency
+Score: 0
+Reason: The output confuses the directionality of Flow IAT Mean by describing it as forward-flow timing, while the provided feature is not defined as forward-directional. This is an inconsistency in feature semantics.
+================================================================================
+Sample ID: 3129
+Criterion: factual_consistency
+Score: 0
+Reason: The explanation introduces an unsupported factual characterization by treating Flow IAT Mean as a forward-direction feature. The supplied evidence does not provide a forward Flow IAT feature.
+================================================================================
+Sample ID: 62126
+Criterion: explanation_correctness
+Score: 0
+Reason: Most interpretations are supported by the supplied SHAP directions and feature list, but the output makes an unsupported qualitative conclusion about interval magnitude. The prompt provides no baseline or threshold allowing the timing values to be characterized as very small.
+================================================================================
+Sample ID: 62126
+Criterion: feature_consistency
+Score: 0
+Reason: The feature names, contributions, and SHAP directions are generally used correctly, but the output introduces an unsupported numerical interpretation of timing features as 'very small.' No units, baseline, or threshold are supplied to justify that characterization.
+================================================================================
+Sample ID: 62126
+Criterion: factual_consistency
+Score: 0
+Reason: The output is mostly grounded in the IDS evidence and avoids unsupported compromise claims, but it adds an unsupported factual characterization of the timing intervals. The supplied evidence lists numeric IAT values but does not establish that they are 'very small.'
+================================================================================
+Sample ID: 24417
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation generally follows the SHAP directions, but it interprets the supplied contribution values as percentages even though the input provides no percentage unit. This makes some numerical interpretations unsupported.
+================================================================================
+Sample ID: 24417
+Criterion: feature_consistency
+Score: 0
+Reason: The output adds percentage units to contribution values that were supplied only as numeric contribution fields without defined units. This is an incorrect or unsupported numerical/unit interpretation.
+================================================================================
+Sample ID: 24417
+Criterion: factual_consistency
+Score: 0
+Reason: The explanation is mostly grounded in the supplied IDS evidence, but the percentage framing of contribution values is not explicitly supported by the input. This constitutes an invented unit for supplied numerical evidence.
+================================================================================
+Sample ID: 3280
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation is mostly grounded, but it makes an unsupported ranking claim by saying the listed zero-valued features supplied the largest positive contributions. Init_Win_bytes_backward had only a 2.29 contribution, while several other positive features had larger contributions.
+================================================================================
+Sample ID: 3280
+Criterion: feature_consistency
+Score: 0
+Reason: The output incorrectly represents the contribution ranking by grouping Init_Win_bytes_backward with the largest positive contributors, despite its supplied contribution being much smaller than multiple other listed features.
+================================================================================
+Sample ID: 3280
+Criterion: factual_consistency
+Score: 0
+Reason: The claim that all four named features supplied the largest positive contributions is not fully grounded in the supplied IDS evidence. One of the named features, Init_Win_bytes_backward, was not among the largest positive contributors.
+================================================================================
+Sample ID: 34308
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation mostly follows the supplied SHAP directions, but it makes an unsupported semantic leap by treating forward and backward packet features as supporting application request/response correlation and describing them as payload-related. The supplied evidence includes one forward TCP payload-packet count and directional packet length features, but does not establish payload content or application-level transactions.
+================================================================================
+Sample ID: 34308
+Criterion: feature_consistency
+Score: 0
+Reason: The output incorrectly characterizes the available directional packet features as "forward and backward payload-related" features. Only act_data_pkt_fwd is defined as counting TCP packets with payload in the forward direction; Bwd Packet Length Max and Fwd Packet Length Max are maximum packet sizes, not explicitly payload-related.
+================================================================================
+Sample ID: 49969
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation mostly follows the supplied SHAP directions, but it makes an unsupported numerical claim by stating that Flow IAT Mean, Fwd IAT Total, and Fwd IAT Mean are the three largest listed timing contributions. Flow Duration has a larger contribution than Fwd IAT Mean, so this conclusion is not logically supported by the provided feature list.
+================================================================================
+Sample ID: 49969
+Criterion: feature_consistency
+Score: 0
+Reason: The output incorrectly ranks the timing-related feature contributions. Flow Duration has a contribution of 7.64, which is greater than Fwd IAT Mean at 5.44, so the stated feature relationship is inconsistent with the supplied values.
+================================================================================
+Sample ID: 49969
+Criterion: factual_consistency
+Score: 0
+Reason: The factual claim about the three largest timing contributions is not grounded in the supplied IDS evidence because it omits Flow Duration, which has a larger contribution than Fwd IAT Mean. This introduces an unsupported factual statement.
+================================================================================
+Sample ID: 55775
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation is mostly supported, but it introduces a 'forward IAT mean' interpretation that is not present in the supplied influential features. The provided IAT features are Flow IAT Mean and Bwd IAT Mean, not forward and backward IAT mean metrics.
+================================================================================
+Sample ID: 55775
+Criterion: feature_consistency
+Score: 0
+Reason: The output refers to a forward IAT mean metric, which is not one of the supplied features and confuses the provided Flow IAT Mean with a nonexistent forward-direction IAT metric.
+================================================================================
+Sample ID: 55775
+Criterion: factual_consistency
+Score: 0
+Reason: The explanation invents an unsupported feature observation by referring to a forward IAT mean metric that was not included in the IDS evidence.
+================================================================================
+Sample ID: 84407
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation generally follows the supplied influential features, but it interprets the contribution values as percentages even though the input provides no percent unit. This makes part of the explanation numerically unsupported.
+================================================================================
+Sample ID: 84407
+Criterion: feature_consistency
+Score: 0
+Reason: The model uses the supplied feature names and directions mostly consistently, but it assigns a percent unit to contribution values that were provided only as raw contribution numbers. This is an incorrect unit/numerical interpretation.
+================================================================================
+Sample ID: 84407
+Criterion: factual_consistency
+Score: 0
+Reason: The output introduces unsupported percentage-form contribution values not present in the supplied IDS evidence. The original evidence provides contribution numbers but does not state that they are percentages.
+================================================================================
+Sample ID: 42189
+Criterion: factual_consistency
+Score: 0
+Reason: The output is mostly grounded, but it introduces the unsupported claim that the features are independent; the supplied IDS evidence lists influential features but does not establish statistical or operational independence.
+================================================================================
+Sample ID: 63571
+Criterion: explanation_correctness
+Score: 0
+Reason: The explanation mostly follows the supplied feature attributions, but it draws an unsupported qualitative conclusion that Flow Duration and Fwd IAT Min are 'very small' and uses that as a basis for special validation attention without any supplied baseline or threshold.
+================================================================================
+Sample ID: 63571
+Criterion: feature_consistency
+Score: 0
+Reason: The feature names, values, SHAP directions, and units are otherwise used consistently, but the output characterizes Flow Duration and Fwd IAT Min as 'very small' despite no provided baseline, threshold, or comparison supporting that qualitative interpretation.
+================================================================================
+Sample ID: 9124
+Criterion: feature_consistency
+Score: 0
+Reason: The output introduces a unit characterization for multiple timing fields as microsecond-scale, but the supplied definitions explicitly state microseconds only for Flow Duration, not for the IAT features.
+================================================================================
+Sample ID: 9124
+Criterion: factual_consistency
+Score: 0
+Reason: Most factual claims are grounded in the provided IDS evidence, but the statement about multiple timing fields being microsecond-scale is not fully supported by the supplied feature definitions.
+================================================================================
+Sample ID: 32185
+Criterion: feature_consistency
+Score: 0
+Reason: The explanation treats the numeric contribution values as percentages even though the supplied evidence provides them only as 'contribution' values without a percent unit. This introduces an unsupported unit interpretation.
