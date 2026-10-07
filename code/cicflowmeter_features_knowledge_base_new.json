@@ -1,0 +1,242 @@
+[
+  {
+    "feature_name": "Init_Win_bytes_backward",
+    "definition": "The total number of bytes sent in the initial window in the backward direction.",
+    "note": "RFC 9293 (Section 3.1): Corresponds to the 16-bit Window field. “The number of data octets beginning with the one indicated in the acknowledgment field that the sender of this segment is willing to accept. The value is shifted when the window scaling extension is used. The window size MUST be treated as an unsigned number, or else large window sizes will appear like negative windows and TCP will not work (MUST-1). It is RECOMMENDED that implementations reserve 32-bit fields for the send and receive window sizes and perform all window computations with 32 bits (REC-1).”",
+    "category": "TCP Window"
+  },
+  {
+    "feature_name": "Bwd Packets/s",
+    "definition": "Number of backward packets per second.",
+    "note": "",
+    "category": "Packet Rates"
+  },
+  {
+    "feature_name": "Bwd Packet Length Std",
+    "definition": "Standard deviation size of packet in the backward direction.",
+    "note": "",
+    "category": "Packet Statistics"
+  },
+  {
+    "feature_name": "Bwd Packet Length Min",
+    "definition": "Minimum size of packet in the backward direction.",
+    "note": "",
+    "category": "Packet Statistics"
+  },
+  {
+    "feature_name": "Init_Win_bytes_forward",
+    "definition": "The total number of bytes sent in the initial window in the forward direction.",
+    "note": "RFC 9293 (Section 3.1): Corresponds to the 16-bit Window field. “The number of data octets beginning with the one indicated in the acknowledgment field that the sender of this segment is willing to accept. The value is shifted when the window scaling extension is used. The window size MUST be treated as an unsigned number, or else large window sizes will appear like negative windows and TCP will not work (MUST-1). It is RECOMMENDED that implementations reserve 32-bit fields for the send and receive window sizes and perform all window computations with 32 bits (REC-1).”",
+    "category": "TCP Window"
+  },
+  {
+    "feature_name": "min_seg_size_forward",
+    "definition": "Minimum segment size observed in the forward direction.",
+    "note": "RFC 9293 (Section 3.1): Related to the Data Offset field (4 bits): “The number of 32-bit words in the TCP header. This indicates where the data begins. The TCP header (even one including options) is an integer multiple of 32 bits long.”",
+    "category": "TCP Segmentation"
+  },
+  {
+    "feature_name": "PSH Flag Count",
+    "definition": "Number of packets with PUSH.",
+    "note": "RFC 9293 (Section 3.1): PSH is a 1-bit control bit: “Push function (see the Send Call description in Section 3.9.1).”",
+    "category": "TCP Flags"
+  },
+  {
+    "feature_name": "Average Packet Size",
+    "definition": "Average size of packet.",
+    "note": "",
+    "category": "Packet Statistics"
+  },
+  {
+    "feature_name": "Total Fwd Packets",
+    "definition": "Total packets in the forward direction.",
+    "note": "",
+    "category": "Packet Counts"
+  },
+  {
+    "feature_name": "Total Length of Fwd Packets",
+    "definition": "Total size of packet in the forward direction.",
+    "note": "",
+    "category": "Flow Length"
+  },
+  {
+    "feature_name": "Fwd Header Length",
+    "definition": "Total bytes used for headers in the forward direction.",
+    "note": "RFC 9293 (Section 3.1): Derived from the Data Offset field (number of 32-bit words in the TCP header).",
+    "category": "Header Features"
+  },
+  {
+    "feature_name": "Fwd IAT Min",
+    "definition": "Minimum time between two packets sent in the forward direction.",
+    "note": "",
+    "category": "Inter-Arrival Time (IAT)"
+  },
+  {
+    "feature_name": "Flow Duration",
+    "definition": "Duration of the flow in Microsecond.",
+    "note": "",
+    "category": "Flow Timing"
+  },
+  {
+    "feature_name": "Bwd IAT Min",
+    "definition": "Minimum time between two packets sent in the backward direction.",
+    "note": "",
+    "category": "Inter-Arrival Time (IAT)"
+  },
+  {
+    "feature_name": "Bwd Header Length",
+    "definition": "Total bytes used for headers in the backward direction.",
+    "note": "RFC 9293 (Section 3.1): Derived from the Data Offset field (number of 32-bit words in the TCP header).",
+    "category": "Header Features"
+  },
+  {
+    "feature_name": "Bwd Packet Length Mean",
+    "definition": "Mean size of packet in the backward direction.",
+    "note": "",
+    "category": "Packet Statistics"
+  },
+  {
+    "feature_name": "URG Flag Count",
+    "definition": "Number of packets with URG.",
+    "note": "RFC 9293 (Section 3.1): URG is a 1-bit control bit: “Urgent pointer field is significant.” The Urgent Pointer field is only interpreted when the URG flag is set.",
+    "category": "TCP Flags"
+  },
+  {
+    "feature_name": "Min Packet Length",
+    "definition": "Minimum length of a packet.",
+    "note": "",
+    "category": "Packet Statistics"
+  },
+  {
+    "feature_name": "Packet Length Std",
+    "definition": "Standard deviation length of a packet.",
+    "note": "",
+    "category": "Packet Statistics"
+  },
+  {
+    "feature_name": "Flow IAT Mean",
+    "definition": "Mean time between two packets sent in the flow.",
+    "note": "",
+    "category": "Inter-Arrival Time (IAT)"
+  },
+  {
+    "feature_name": "Total Backward Packets",
+    "definition": "Total packets in the backward direction.",
+    "note": "",
+    "category": "Packet Counts"
+  },
+  {
+    "feature_name": "Flow IAT Min",
+    "definition": "Minimum time between two packets sent in the flow.",
+    "note": "",
+    "category": "Inter-Arrival Time (IAT)"
+  },
+  {
+    "feature_name": "Fwd Packet Length Max",
+    "definition": "Maximum size of packet in the forward direction.",
+    "note": "",
+    "category": "Packet Statistics"
+  },
+  {
+    "feature_name": "Fwd PSH Flags",
+    "definition": "Number of times the PSH flag was set in packets travelling in the forward direction (0 for UDP).",
+    "note": "RFC 9293 (Section 3.1): PSH is a 1-bit control bit: “Push function (see the Send Call description in Section 3.9.1).”",
+    "category": "TCP Flags"
+  },
+  {
+    "feature_name": "Max Packet Length",
+    "definition": "Maximum length of a packet.",
+    "note": "",
+    "category": "Packet Statistics"
+  },
+  {
+    "feature_name": "Fwd Packet Length Std",
+    "definition": "Standard deviation size of packet in the forward direction.",
+    "note": "",
+    "category": "Packet Statistics"
+  },
+  {
+    "feature_name": "Packet Length Mean",
+    "definition": "Mean length of a packet.",
+    "note": "",
+    "category": "Packet Statistics"
+  },
+  {
+    "feature_name": "Fwd IAT Mean",
+    "definition": "Mean time between two packets sent in the forward direction.",
+    "note": "",
+    "category": "Inter-Arrival Time (IAT)"
+  },
+  {
+    "feature_name": "Fwd Packets/s",
+    "definition": "Number of forward packets per second.",
+    "note": "",
+    "category": "Packet Rates"
+  },
+  {
+    "feature_name": "Packet Length Variance",
+    "definition": "Variance length of a packet.",
+    "note": "",
+    "category": "Packet Statistics"
+  },
+  {
+    "feature_name": "Fwd Packet Length Mean",
+    "definition": "Mean size of packet in the forward direction.",
+    "note": "",
+    "category": "Packet Statistics"
+  },
+  {
+    "feature_name": "Bwd Packet Length Max",
+    "definition": "Maximum size of packet in the backward direction.",
+    "note": "",
+    "category": "Packet Statistics"
+  },
+  {
+    "feature_name": "FIN Flag Count",
+    "definition": "Number of packets with FIN.",
+    "note": "RFC 9293 (Section 3.1): FIN is a 1-bit control bit: “No more data from sender.”",
+    "category": "TCP Flags"
+  },
+  {
+    "feature_name": "Flow IAT Max",
+    "definition": "Maximum time between two packets sent in the flow.",
+    "note": "",
+    "category": "Inter-Arrival Time (IAT)"
+  },
+  {
+    "feature_name": "Total Length of Bwd Packets",
+    "definition": "Total size of packet in the backward direction.",
+    "note": "",
+    "category": "Flow Length"
+  },
+  {
+    "feature_name": "Idle Mean",
+    "definition": "Mean time a flow was idle before becoming active.",
+    "note": "",
+    "category": "Activity Features"
+  },
+  {
+    "feature_name": "act_data_pkt_fwd",
+    "definition": "Count of packets with at least 1 byte of TCP data payload in the forward direction.",
+    "note": "",
+    "category": "Packet Counts"
+  },
+  {
+    "feature_name": "Fwd IAT Max",
+    "definition": "Maximum time between two packets sent in the forward direction.",
+    "note": "",
+    "category": "Inter-Arrival Time (IAT)"
+  },
+  {
+    "feature_name": "Bwd IAT Std",
+    "definition": "Standard deviation time between two packets sent in the backward direction.",
+    "note": "",
+    "category": "Inter-Arrival Time (IAT)"
+  },
+  {
+    "feature_name": "Fwd IAT Total",
+    "definition": "Total time between two packets sent in the forward direction.",
+    "note": "",
+    "category": "Inter-Arrival Time (IAT)"
+  }
+]
